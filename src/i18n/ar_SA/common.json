@@ -1,0 +1,60 @@
+{
+    "common": {
+        "cancel": "إلغاء",
+        "no": "no",
+        "yes": "yes",
+        "welcome": "مرحبًا بك في التطبيق",
+        "isLoading": "جارٍ التحميل",
+        "textCopied": " تم نسخ {{title}}"
+    },
+    "settingScreen": {
+        "settingTitle": "الإعدادات",
+        "changeLanguage": "قم بتغيير لغتك",
+        "frLanguage": "الفرنسية",
+        "enLanguage": "الإنجليزية",
+        "arLanguage": "عربي",
+        "toggleTheme": "تبديل الموضوع"
+    },
+    "blockScreen": {
+        "blockTitle": "كتل",
+        "sender": "Sender",
+        "blockId": "Block ID",
+        "blockHeight": "height",
+        "blockVersion": "version",
+        "blockTransactionRoot": "transaction Root",
+        "blockAssertRoot": "Assert Root",
+        "previousBlockId": "Previous Block",
+        "blockTransactionNumber": "Tr Number",
+        "blockNumberOfAssets": "Nb of Assets",
+        "blockNumberOfEvents": "nb of Events",
+        "blockTime": "Time",
+        "blockInfo": "Block Info",
+        "blockSignature": "Signature",
+        "blockGenerator": "Generator",
+        "blockGeneratorAddress": "Address",
+        "blockGeneratorName": "Name",
+        "blockGeneratorPublicKey": "Public Key"
+    },
+    "transactionsScreen": {
+        "transactionTitle": "المعاملات",
+        "sender": "Sender",
+        "textCopier": "The TransactionID has been copied",
+        "transactionInfo": "Transaction Info",
+        "feeAmount": "Fee Amount",
+        "minFee": "Minimum Fee",
+        "sizeBlock": "Block Size",
+        "metaData": "Block Meta Data",
+        "blockId": "Block ID",
+        "blockInfo": "Block Info ",
+        "blockHeight": "Block Info",
+        "blockTimestamp": "Block Timestamp",
+        "sendInformation": "Sender Information",
+        "transactionAddress": "Transaction Address",
+        "transactionName": "Transaction Name",
+        "transactionPublicKey": "Transaction Public Key",
+        "metaInfo": "Transaction Meta Info",
+        "metaAmount": "Transaction Amount",
+        "metaRecipientAddress": "Transaction Recipient address",
+        "metaTokenId": "Transaction Token Id"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "common": {
+        "cancel": "Annuler",
+        "no": "non",
+        "yes": "Oui",
+        "welcome": "Bienvenue",
+        "isLoading": "En train "
+    },
+    "settingScreen": {
+        "settingTitle": "Parametres",
+        "changeLanguage": "Changez votre Langue",
+        "frLanguage": "Francais",
+        "enLanguage": "Anglais",
+        "arLanguage": "Arabe",
+        "toggleTheme": "Changez le theme"
+    },
+    "blockScreen": {
+        "blockTitle": "Bloques",
+        "sender": "Sender"
+    },
+    "transactionsScreen": {
+        "transactionTitle": "Transactions",
+        "sender": "Sender",
+        "textCopier": "The TransactionID has been copied",
+        "transactionInfo": "Transaction Info",
+        "feeAmount": "Fee Amount",
+        "minFee": "Minimum Fee",
+        "sizeBlock": "Block Size",
+        "metaData": "Block Meta Data",
+        "blockId": "Block ID",
+        "blockInfo": "Block Info ",
+        "blockHeight": "Block Info",
+        "blockTimestamp": "Block Timestamp",
+        "sendInformation": "Sender Information",
+        "transactionAddress": "Transaction Address",
+        "transactionName": "Transaction Name",
+        "transactionPublicKey": "Transaction Public Key",
+        "metaInfo": "Transaction Meta Info",
+        "metaAmount": "Transaction Amount",
+        "metaRecipientAddress": "Transaction Recipient address",
+        "metaTokenId": "Transaction Token Id"
+    }
+}

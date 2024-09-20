@@ -15,46 +15,20 @@
         "arLanguage": "عربي",
         "toggleTheme": "تبديل الموضوع"
     },
-    "blockScreen": {
-        "blockTitle": "كتل",
-        "sender": "Sender",
-        "blockId": "Block ID",
-        "blockHeight": "height",
-        "blockVersion": "version",
-        "blockTransactionRoot": "transaction Root",
-        "blockAssertRoot": "Assert Root",
-        "previousBlockId": "Previous Block",
-        "blockTransactionNumber": "Tr Number",
-        "blockNumberOfAssets": "Nb of Assets",
-        "blockNumberOfEvents": "nb of Events",
-        "blockTime": "Time",
-        "blockInfo": "Block Info",
-        "blockSignature": "Signature",
-        "blockGenerator": "Generator",
-        "blockGeneratorAddress": "Address",
-        "blockGeneratorName": "Name",
-        "blockGeneratorPublicKey": "Public Key"
+    "propertyScreen": {
+        "property": {
+            "details": "التفاصيل",
+            "title": "العنوان",
+            "price": "السعر",
+            "address": "العنوان",
+            "bedrooms": "الغرف",
+            "bathrooms": "الحمامات",
+            "size": "الحجم",
+            "status": "الحالة",
+            "description": "الوصف"
+        }
     },
-    "transactionsScreen": {
-        "transactionTitle": "المعاملات",
-        "sender": "Sender",
-        "textCopier": "The TransactionID has been copied",
-        "transactionInfo": "Transaction Info",
-        "feeAmount": "Fee Amount",
-        "minFee": "Minimum Fee",
-        "sizeBlock": "Block Size",
-        "metaData": "Block Meta Data",
-        "blockId": "Block ID",
-        "blockInfo": "Block Info ",
-        "blockHeight": "Block Info",
-        "blockTimestamp": "Block Timestamp",
-        "sendInformation": "Sender Information",
-        "transactionAddress": "Transaction Address",
-        "transactionName": "Transaction Name",
-        "transactionPublicKey": "Transaction Public Key",
-        "metaInfo": "Transaction Meta Info",
-        "metaAmount": "Transaction Amount",
-        "metaRecipientAddress": "Transaction Recipient address",
-        "metaTokenId": "Transaction Token Id"
+    "likedPropertyScreen": {
+        "likedPropertyTitle": "الممتلكات المعجب بها"
     }
 }

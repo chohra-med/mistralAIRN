@@ -1,15 +1,14 @@
 import * as React from 'react';
 import AppScreens, {AppScreensParamList} from './AppScreens';
-import BlockScreen from '~/screens/BlockScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import SettingScreen from '~/screens/SettingScreen';
-import TransactionNavigator from './TransactionNavigator';
 import SettingsIcon from '../../assets/icons/iconSettings.svg';
 import TransactionsIcon from '../../assets/icons/iconTransactions.svg';
 import BlocksIcon from '../../assets/icons/iconBlocks.svg';
 import {useTranslation} from 'react-i18next';
 import {useAppTheme} from '~/container/AppThemeProvider';
-import BlockNavigator from './BlockNavigator';
+import PropertyNavigator from './PropertyNavigator';
+import LikedPropertyList from '~/screens/LikedPropertyScreen/components/LikedPropertyList';
 
 const Tab = createBottomTabNavigator<AppScreensParamList>();
 
@@ -17,10 +16,10 @@ const AppNavigation = () => {
   const {t} = useTranslation('common');
   const {colors} = useAppTheme();
   return (
-    <Tab.Navigator initialRouteName={AppScreens.BLOCK_NAVIGATOR}>
+    <Tab.Navigator initialRouteName={AppScreens.PROPERTY_NAVIGATOR}>
       <Tab.Screen
-        name={AppScreens.BLOCK_NAVIGATOR}
-        component={BlockNavigator}
+        name={AppScreens.PROPERTY_NAVIGATOR}
+        component={PropertyNavigator}
         options={{
           title: t('blockScreen.blockTitle'),
           tabBarLabel: t('blockScreen.blockTitle'),
@@ -32,8 +31,8 @@ const AppNavigation = () => {
         }}
       />
       <Tab.Screen
-        name={AppScreens.TRANSACTION_NAVIGATOR}
-        component={TransactionNavigator}
+        name={AppScreens.LIKED_PROPERTY_SCREEN}
+        component={LikedPropertyList}
         options={{
           title: t('transactionsScreen.transactionTitle'),
           tabBarLabel: t('transactionsScreen.transactionTitle'),

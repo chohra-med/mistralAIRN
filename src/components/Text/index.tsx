@@ -1,7 +1,7 @@
 import {useAppTheme} from '~/container/AppThemeProvider';
 import * as React from 'react';
-import {ColorValue, StyleProp, TextStyle} from 'react-native';
-import {TextProps, Text} from 'react-native-paper';
+import {ColorValue, StyleProp, TextProps, TextStyle} from 'react-native';
+import {Text} from 'react-native-paper';
 
 interface StyledTextProps extends TextProps {
   h1?: boolean;
@@ -15,6 +15,7 @@ interface StyledTextProps extends TextProps {
   title?: string;
   textColor?: ColorValue;
   style?: StyleProp<TextStyle>;
+  children?: React.ReactNode;
 }
 
 const StyledText: React.FC<StyledTextProps> = ({
@@ -29,6 +30,7 @@ const StyledText: React.FC<StyledTextProps> = ({
   style,
   textColor,
   small,
+  children,
   ...props
 }) => {
   const theme = useAppTheme();
@@ -42,11 +44,12 @@ const StyledText: React.FC<StyledTextProps> = ({
         h5 && theme.fonts.labelLarge,
         p && theme.fonts.labelSmall,
         small && theme.fonts.bodyMedium,
-        {color: !!textColor ? textColor : theme.colors.text},
+        bold && theme.fonts.bodyLarge,
+        {color: textColor || theme.colors.text},
         style,
       ]}
       {...props}>
-      {props.children}
+      {children}
     </Text>
   );
 };

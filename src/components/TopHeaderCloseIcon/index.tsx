@@ -1,8 +1,7 @@
 import {useAppTheme} from '~/container/AppThemeProvider';
 import * as React from 'react';
-import {ColorValue, StyleProp, StyleSheet, TextStyle, View} from 'react-native';
-import {TextProps, Text, List, IconButton} from 'react-native-paper';
-import {IconSource} from 'react-native-paper/lib/typescript/components/Icon';
+import {StyleSheet, View} from 'react-native';
+import {IconButton} from 'react-native-paper';
 import {moderateScale} from 'react-native-size-matters';
 import {useNavigation} from '@react-navigation/native';
 import {OnAppScreenNavigationProps} from '~/navigation/types';

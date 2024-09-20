@@ -1,8 +1,8 @@
 import * as React from 'react';
 import AppScreens, {AppScreensParamList} from './AppScreens';
 import {createStackNavigator} from '@react-navigation/stack';
-import  { PropertyScreen } from '~/screens/PropertyScreen';
-import PropertyItemScreen from '~/screens/PropertyScreen/PropertyItemScreen';
+import HomeScreen from '~/screens/HomeScreen';
+import PropertyScreen from '~/screens/HomeScreen/screens/PropertyScreen';
 
 const Stack = createStackNavigator<AppScreensParamList>();
 
@@ -16,13 +16,13 @@ const PropertyNavigator = () => {
     <Stack.Navigator initialRouteName={AppScreens.PROPERTY_SCREEN}>
       <Stack.Screen
         name={AppScreens.PROPERTY_SCREEN}
-        component={PropertyScreen}
+        component={HomeScreen}
         options={options}
       />
-      <Stack.Group >
+      <Stack.Group>
         <Stack.Screen
           name={AppScreens.PROPERTY_ITEM_SCREEN}
-          component={PropertyItemScreen}
+          component={PropertyScreen}
           options={options}
         />
       </Stack.Group>

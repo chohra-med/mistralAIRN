@@ -6,5 +6,6 @@
         "ios/Pods/Headers/Public/RCT-Folly/folly/lang",
         "ios/Pods/Headers/Private/RCT-Folly/folly/lang"
     ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "i18n-ally.keystyle": "nested"
 }

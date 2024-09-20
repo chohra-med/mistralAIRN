@@ -1,5 +1,5 @@
 import React, {useCallback, useRef} from 'react';
-import {FlatList, View, Animated} from 'react-native';
+import {FlatList, View, StyleSheet, Text, Animated} from 'react-native';
 import {Property} from '~/api/types';
 import {Divider} from 'react-native-paper';
 
@@ -12,12 +12,17 @@ import {
   propertiesSelectors,
 } from '~/redux/properties/properties';
 import useActions from '~/hooks/useActions';
-import PropertyListItem from '~/screens/PropertyScreen/components/PropertyListItem';
+import PropertyListItem from '~/screens/HomeScreen/components/PropertyListItem';
+import StyledImage from '~/components/StyledImage';
+
+const EMPTY_LIST_IMAGE =
+  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=3546&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
 const LikedPropertyList: React.FC = () => {
   const likedProperties = useSelector(
     propertiesSelectors.selectLikedProperties,
   );
+
   const navigation = useNavigation<OnAppScreenNavigationProps>();
 
   const [onLikeProperty, onDislikeProperty] = useActions([
@@ -25,9 +30,7 @@ const LikedPropertyList: React.FC = () => {
     propertiesActions.onDislikeProperty,
   ]);
 
-  const animatedValues = useRef(
-    new Map(likedProperties.map(item => [item.id, new Animated.Value(1)])),
-  ).current;
+  const fadeAnim = useRef(new Map<string, Animated.Value>()).current;
 
   const onLikePropertyHandler = useCallback(
     (id: Property['id']) => {
@@ -38,18 +41,18 @@ const LikedPropertyList: React.FC = () => {
 
   const onDislikePropertyHandler = useCallback(
     (id: Property['id']) => {
-      const animatedValue = animatedValues.get(id);
-      if (animatedValue) {
-        Animated.timing(animatedValue, {
-          toValue: 0,
-          duration: 300,
-          useNativeDriver: true,
-        }).start(() => {
-          onDislikeProperty(id);
-        });
+      if (!fadeAnim.has(id)) {
+        fadeAnim.set(id, new Animated.Value(1));
       }
+      Animated.timing(fadeAnim.get(id)!, {
+        toValue: 0,
+        duration: 500,
+        useNativeDriver: true,
+      }).start(() => {
+        onDislikeProperty(id);
+      });
     },
-    [onDislikeProperty, animatedValues],
+    [onDislikeProperty, fadeAnim],
   );
 
   const onPressProperty = useCallback(
@@ -66,17 +69,11 @@ const LikedPropertyList: React.FC = () => {
 
   const renderPropertyItem = useCallback(
     ({item}: {item: Property}) => {
-      const animatedStyle = {
-        opacity: animatedValues.get(item.id) ?? 1,
-        transform: [
-          {
-            scale: animatedValues.get(item.id) ?? 1,
-          },
-        ],
-      };
-
+      if (!fadeAnim.has(item.id)) {
+        fadeAnim.set(item.id, new Animated.Value(1));
+      }
       return (
-        <Animated.View style={animatedStyle}>
+        <Animated.View style={{opacity: fadeAnim.get(item.id)}}>
           <PropertyListItem
             onPress={onPressProperty}
             property={item}
@@ -90,9 +87,21 @@ const LikedPropertyList: React.FC = () => {
       onPressProperty,
       onDislikePropertyHandler,
       onLikePropertyHandler,
-      animatedValues,
+      fadeAnim,
     ],
   );
+
+  if (likedProperties.length === 0) {
+    return (
+      <View style={styles.emptyContainer}>
+        <StyledImage
+          source={{uri: EMPTY_LIST_IMAGE}}
+          style={styles.emptyImage}
+        />
+        <Text style={styles.emptyText}>No liked properties yet</Text>
+      </View>
+    );
+  }
 
   return (
     <FlatList
@@ -105,5 +114,24 @@ const LikedPropertyList: React.FC = () => {
     />
   );
 };
+
+const styles = StyleSheet.create({
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  emptyImage: {
+    width: '100%',
+    height: 200,
+    marginBottom: 20,
+  },
+  emptyText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
 
 export default React.memo(LikedPropertyList);

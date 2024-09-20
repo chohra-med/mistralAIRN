@@ -5,7 +5,7 @@ import LikedPropertyList from './components/LikedPropertyList';
 export const LikedPropertyScreen = (): JSX.Element => {
   return (
     <SafeAreaView
-      testID="screen.transactionScreen"
+      testID="screen.likedPropertyScreen"
       style={containerStyle.container}>
       <LikedPropertyList />
     </SafeAreaView>

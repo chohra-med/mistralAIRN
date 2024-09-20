@@ -1,6 +1,5 @@
-import {t} from 'i18next';
-import React, {useCallback, useMemo, useState} from 'react';
-import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import React, {useCallback, useMemo} from 'react';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {moderateScale, verticalScale} from 'react-native-size-matters';
 import {Property} from '~/api/types';
 import StyledText from '~/components/Text';
@@ -37,12 +36,14 @@ const PropertyListItem: React.FC<PropertyListItemProps> = ({
   }, [onPress]);
 
   const handleOnIconPress = useCallback(() => {
+    console.log('handleOnIconPress', isLiked, property?.id);
     if (isLiked) {
       onDislikeProperty(property?.id);
     } else {
       onLikeProperty(property?.id);
     }
-  }, [isLiked]);
+  }, [isLiked, onDislikeProperty, onLikeProperty, property?.id]);
+
   const renderPropertyDetails = useMemo(
     () => (
       <View style={styles.detailsContainer}>
@@ -64,7 +65,10 @@ const PropertyListItem: React.FC<PropertyListItemProps> = ({
   );
 
   return (
-    <Card style={styles.card} onPress={handleOnPress}>
+    <Card
+      style={styles.card}
+      onPress={handleOnPress}
+      testID={`propertyListItem.${property.id}`}>
       <StyledImage source={{uri: property.imageUrl}} style={styles.image} />
       <Card.Content>
         <View style={styles.headerContainer}>

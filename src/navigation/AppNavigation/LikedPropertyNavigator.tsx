@@ -1,10 +1,8 @@
 import * as React from 'react';
 import AppScreens, {AppScreensParamList} from './AppScreens';
 import {createStackNavigator} from '@react-navigation/stack';
-import BlockScreen, { PropertyScreen } from '~/screens/PropertyScreen';
-import BlockItemScreen from '~/screens/PropertyScreen/PropertyItemScreen';
-import PropertyItemScreen from '~/screens/PropertyScreen/PropertyItemScreen';
 import LikedPropertyList from '~/screens/LikedPropertyScreen/components/LikedPropertyList';
+import PropertyScreen from '~/screens/HomeScreen/screens/PropertyScreen';
 
 const Stack = createStackNavigator<AppScreensParamList>();
 
@@ -21,10 +19,10 @@ const LikedPropertyNavigator = () => {
         component={LikedPropertyList}
         options={options}
       />
-      <Stack.Group >
+      <Stack.Group>
         <Stack.Screen
           name={AppScreens.PROPERTY_ITEM_SCREEN}
-          component={PropertyItemScreen}
+          component={PropertyScreen}
           options={options}
         />
       </Stack.Group>

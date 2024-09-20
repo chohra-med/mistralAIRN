@@ -8,12 +8,11 @@ import AppScreens from '~/navigation/AppNavigation/AppScreens';
 import useActions from '~/hooks/useActions';
 import {propertiesActions} from '~/redux/properties/properties';
 import PropertyListItem, {ITEM_HEIGHT} from './PropertyListItem';
+import {useProperties} from '~/hooks/useProperties';
 
-interface PropertyListProps {
-  properties: Property[];
-}
+const PropertyList: React.FC = () => {
+  const {properties} = useProperties();
 
-const PropertyList: React.FC<PropertyListProps> = ({properties}) => {
   const navigation = useNavigation<OnAppScreenNavigationProps>();
 
   const [onLikeProperty, onDislikeProperty] = useActions([

@@ -3,12 +3,12 @@ import AppScreens, {AppScreensParamList} from './AppScreens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import SettingScreen from '~/screens/SettingScreen';
 import SettingsIcon from '../../assets/icons/iconSettings.svg';
-import TransactionsIcon from '../../assets/icons/iconTransactions.svg';
-import BlocksIcon from '../../assets/icons/iconBlocks.svg';
 import {useTranslation} from 'react-i18next';
 import {useAppTheme} from '~/container/AppThemeProvider';
 import PropertyNavigator from './PropertyNavigator';
 import LikedPropertyList from '~/screens/LikedPropertyScreen/components/LikedPropertyList';
+// @ts-ignore
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createBottomTabNavigator<AppScreensParamList>();
 
@@ -21,31 +21,40 @@ const AppNavigation = () => {
         name={AppScreens.PROPERTY_NAVIGATOR}
         component={PropertyNavigator}
         options={{
-          title: t('blockScreen.blockTitle'),
-          tabBarLabel: t('blockScreen.blockTitle'),
+          title: t('propertyScreen.propertyTitle'),
+          tabBarLabel: t('propertyScreen.propertyTitle'),
           tabBarActiveTintColor: colors.primary,
-          tabBarIcon: ({color}): JSX.Element => {
-            return <BlocksIcon fill={color} testID="navigateToBlockScreen" />;
+          tabBarIcon: ({color, focused}): JSX.Element => {
+            return (
+              <Icon
+                name={focused ? 'home' : 'home-outline'}
+                size={24}
+                color={color}
+                testID="navigateToPropertyScreen"
+              />
+            );
           },
-          tabBarAccessibilityLabel: t('blockScreen.blockTitle'),
+          tabBarAccessibilityLabel: t('propertyScreen.propertyTitle'),
         }}
       />
       <Tab.Screen
         name={AppScreens.LIKED_PROPERTY_SCREEN}
         component={LikedPropertyList}
         options={{
-          title: t('transactionsScreen.transactionTitle'),
-          tabBarLabel: t('transactionsScreen.transactionTitle'),
+          title: t('likedPropertyScreen.likedPropertyTitle'),
+          tabBarLabel: t('likedPropertyScreen.likedPropertyTitle'),
           tabBarActiveTintColor: colors.primary,
-          tabBarIcon: ({color}): JSX.Element => {
+          tabBarIcon: ({color, focused}): JSX.Element => {
             return (
-              <TransactionsIcon
-                stroke={color}
-                testID="navigateToTransactionScreen"
+              <Icon
+                name={focused ? 'heart' : 'heart-outline'}
+                size={24}
+                color={color}
+                testID="navigateToLikedPropertyScreen"
               />
             );
           },
-          tabBarAccessibilityLabel: t('transactionsScreen.transactionTitle'),
+          tabBarAccessibilityLabel: t('likedPropertyScreen.likedPropertyTitle'),
         }}
       />
       <Tab.Screen

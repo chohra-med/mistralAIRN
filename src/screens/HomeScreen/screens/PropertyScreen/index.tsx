@@ -11,7 +11,6 @@ import {containerStyle} from '~/theme/globalStyling/cards';
 import {List} from 'react-native-paper';
 import {t} from 'i18next';
 import {moderateScale} from 'react-native-size-matters';
-import TopHeaderCloseIcon from '~/components/TopHeaderCloseIcon';
 import {propertiesSelectors} from '~/redux/properties/properties';
 import StyledImage from '~/components/StyledImage';
 // @ts-ignore

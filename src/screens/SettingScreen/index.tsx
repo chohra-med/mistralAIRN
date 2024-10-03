@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useCallback, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {StyleSheet} from 'react-native';
 import {List, Switch} from 'react-native-paper';
@@ -13,9 +13,6 @@ import {containerStyle} from '~/theme/globalStyling/cards';
 export const SettingScreen = (): JSX.Element => {
   const [isAccordionVisible, setAccordionVisible] = useState(false);
 
-  const handleAccordionPress = () =>
-    setAccordionVisible(prevState => !prevState);
-
   // Just adding the right hook to change translation, because we are using it on  LanguageHelper context
   const {t} = useTranslation('common');
   const isDarkMode = useSelector(appConfigSelectors.isDarkMode);
@@ -23,9 +20,22 @@ export const SettingScreen = (): JSX.Element => {
   const dispatch = useDispatch();
   const {colors} = useAppTheme();
 
-  const onTogglePress = () => {
+  const handleAccordionPress = useCallback(() => {
+    setAccordionVisible(prevState => !prevState);
+  }, [setAccordionVisible]);
+
+  const onTogglePress = useCallback(() => {
     dispatch(appConfigActions.toggleDarkMode());
-  };
+  }, [dispatch]);
+
+  const onLanguagePress = useCallback(
+    (language: AppLanguageType) => {
+      dispatch(appConfigActions.changeLanguage(language));
+      handleAccordionPress();
+    },
+    [dispatch, handleAccordionPress],
+  );
+
   return (
     <SafeAreaView
       testID="screen.settingScreen"
@@ -45,24 +55,15 @@ export const SettingScreen = (): JSX.Element => {
         expanded={isAccordionVisible}
         onPress={handleAccordionPress}>
         <List.Item
-          onPress={() => {
-            dispatch(appConfigActions.changeLanguage(AppLanguageType.FRENCH));
-            handleAccordionPress();
-          }}
+          onPress={() => onLanguagePress(AppLanguageType.FRENCH)}
           title={t('settingScreen.frLanguage')}
         />
         <List.Item
-          onPress={() => {
-            dispatch(appConfigActions.changeLanguage(AppLanguageType.ENGLISH));
-            handleAccordionPress();
-          }}
+          onPress={() => onLanguagePress(AppLanguageType.ENGLISH)}
           title={t('settingScreen.enLanguage')}
         />
         <List.Item
-          onPress={() => {
-            dispatch(appConfigActions.changeLanguage(AppLanguageType.ARABIC));
-            handleAccordionPress();
-          }}
+          onPress={() => onLanguagePress(AppLanguageType.ARABIC)}
           title={t('settingScreen.arLanguage')}
         />
       </List.Accordion>

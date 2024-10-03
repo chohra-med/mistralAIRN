@@ -36,7 +36,6 @@ const PropertyListItem: React.FC<PropertyListItemProps> = ({
   }, [onPress]);
 
   const handleOnIconPress = useCallback(() => {
-    console.log('handleOnIconPress', isLiked, property?.id);
     if (isLiked) {
       onDislikeProperty(property?.id);
     } else {

@@ -1,4 +1,4 @@
-package com.scalablereactnativeboilerplate
+package com.chatGptReactNativeWrapper
 
 import android.app.Application
 import com.facebook.react.PackageList

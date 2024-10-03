@@ -18,8 +18,7 @@ export const loadAllProperties = createAsyncThunk<
   'properties/loadAllProperties',
   async () => {
     try {
-
-      const response = await fetch('/api/properties');
+      const response = await propertiesApi.loadAllProperties();
       const data = await response.json();
       return data.properties;
     } catch (error) {

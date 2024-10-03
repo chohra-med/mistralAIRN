@@ -2,6 +2,7 @@ import React, {useCallback, useRef} from 'react';
 import {FlatList, View, StyleSheet, Text, Animated} from 'react-native';
 import {Property} from '~/api/types';
 import {Divider} from 'react-native-paper';
+import {t} from 'i18next';
 
 import {useNavigation} from '@react-navigation/native';
 import AppScreens from '~/navigation/AppNavigation/AppScreens';
@@ -14,9 +15,8 @@ import {
 import useActions from '~/hooks/useActions';
 import PropertyListItem from '~/screens/HomeScreen/components/PropertyListItem';
 import StyledImage from '~/components/StyledImage';
-
-const EMPTY_LIST_IMAGE =
-  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=3546&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+import {EMPTY_LIST_IMAGE} from '~/api/constant';
+import StyledText from '~/components/Text';
 
 const LikedPropertyList: React.FC = () => {
   const likedProperties = useSelector(
@@ -98,6 +98,9 @@ const LikedPropertyList: React.FC = () => {
           source={{uri: EMPTY_LIST_IMAGE}}
           style={styles.emptyImage}
         />
+        <StyledText h3 style={styles.emptyText}>
+          {t('likedPropertyScreen.noLikedProperties')}
+        </StyledText>
         <Text style={styles.emptyText}>No liked properties yet</Text>
       </View>
     );

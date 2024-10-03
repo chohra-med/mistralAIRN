@@ -16,6 +16,7 @@
         "toggleTheme": "تبديل الموضوع"
     },
     "propertyScreen": {
+        "propertyTitle": "الممتلكات",
         "property": {
             "details": "التفاصيل",
             "title": "العنوان",

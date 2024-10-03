@@ -8,7 +8,9 @@ import { Property } from '~/api/types';
 
 
 type PropertiesState = {
+  // propertiesList is an array of properties
   propertiesList: PropertiesList;
+  // likedProperties is an array of property ids
   likedProperties: Array<Property['id']>;
 };
 
@@ -22,6 +24,8 @@ const propertiesSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+    // add case for loadAllProperties
+    // we set the propertiesList to the properties list returned by the api
     builder.addCase(
       propertiesActions.loadAllProperties.fulfilled,
       (state, action) => {
@@ -30,6 +34,8 @@ const propertiesSlice = createSlice({
 
       }
     );
+    // add case for onLikeProperty
+    // we add the property id to the likedProperties list
     builder.addCase(
       propertiesActions.onLikeProperty.fulfilled,
       (state, action) => {
@@ -38,6 +44,8 @@ const propertiesSlice = createSlice({
         return state;
       },
     );
+    // add case for onDislikeProperty
+    // we remove the property id from the likedProperties list
     builder.addCase(
       propertiesActions.onDislikeProperty.fulfilled,
       (state, action) => {

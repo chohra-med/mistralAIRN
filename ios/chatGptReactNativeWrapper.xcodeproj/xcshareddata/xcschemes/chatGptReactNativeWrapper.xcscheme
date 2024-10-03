@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "scalableReactNativeBoilerplate.app"
-               BlueprintName = "scalableReactNativeBoilerplate"
-               ReferencedContainer = "container:scalableReactNativeBoilerplate.xcodeproj">
+               BuildableName = "chatGptReactNativeWrapper.app"
+               BlueprintName = "chatGptReactNativeWrapper"
+               ReferencedContainer = "container:chatGptReactNativeWrapper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "scalableReactNativeBoilerplateTests.xctest"
-               BlueprintName = "scalableReactNativeBoilerplateTests"
-               ReferencedContainer = "container:scalableReactNativeBoilerplate.xcodeproj">
+               BuildableName = "chatGptReactNativeWrapperTests.xctest"
+               BlueprintName = "chatGptReactNativeWrapperTests"
+               ReferencedContainer = "container:chatGptReactNativeWrapper.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "scalableReactNativeBoilerplate.app"
-            BlueprintName = "scalableReactNativeBoilerplate"
-            ReferencedContainer = "container:scalableReactNativeBoilerplate.xcodeproj">
+            BuildableName = "chatGptReactNativeWrapper.app"
+            BlueprintName = "chatGptReactNativeWrapper"
+            ReferencedContainer = "container:chatGptReactNativeWrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "scalableReactNativeBoilerplate.app"
-            BlueprintName = "scalableReactNativeBoilerplate"
-            ReferencedContainer = "container:scalableReactNativeBoilerplate.xcodeproj">
+            BuildableName = "chatGptReactNativeWrapper.app"
+            BlueprintName = "chatGptReactNativeWrapper"
+            ReferencedContainer = "container:chatGptReactNativeWrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

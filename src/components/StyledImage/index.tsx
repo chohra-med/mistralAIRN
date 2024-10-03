@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {ImageProps, ActivityIndicator, View, StyleSheet} from 'react-native';
 import FastImage, {Source} from 'react-native-fast-image';
+import {useTheme} from 'react-native-paper';
 import {EMPTY_IMAGE_URI} from '~/api/constant';
 
 type StyledImageProps = ImageProps & {
@@ -14,12 +15,13 @@ const StyledImage = ({
   style,
   source,
   placeholderSource,
-  loaderColor = '#000',
+  loaderColor ,
   ...props
 }: StyledImageProps) => {
   const [imageError, setImageError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  const {colors} = useTheme();
   // Using an empty image from Unsplash as the default placeholder
   const defaultPlaceholder = {
     uri: EMPTY_IMAGE_URI,
@@ -34,11 +36,11 @@ const StyledImage = ({
   }
 
   function onError() {
-    console.log('onError');
     setImageError(true);
     setIsLoading(false);
   }
 
+  const customizedLoaderColor = loaderColor || colors.onBackground;
   const imageSource = imageError
     ? placeholderSource || defaultPlaceholder
     : source;
@@ -55,8 +57,12 @@ const StyledImage = ({
         {...props}
       />
       {isLoading && (
-        <View style={styles.loaderContainer}>
-          <ActivityIndicator size="small" color={loaderColor} />
+        <View
+          style={[
+            styles.loaderContainer,
+            {backgroundColor: colors.background},
+          ]}>
+          <ActivityIndicator size="small" color={customizedLoaderColor} />
         </View>
       )}
     </View>
@@ -71,7 +77,6 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.7)',
   },
 });
 

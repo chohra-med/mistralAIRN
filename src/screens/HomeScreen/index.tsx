@@ -1,12 +1,12 @@
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {containerStyle} from '~/theme/globalStyling/cards';
-import PropertyList from './components/PropertyList';
+import ConversationList from './components/ConversationList';
 
 export const HomeScreen = (): JSX.Element => {
   return (
     <SafeAreaView style={containerStyle.container} testID="screen.homeScreen">
-      <PropertyList />
+      <ConversationList />
     </SafeAreaView>
   );
 };

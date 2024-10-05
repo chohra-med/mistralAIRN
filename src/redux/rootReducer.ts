@@ -1,9 +1,9 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import propertiesReducer from './properties/properties';
+import openAIchatsReducer from './openAIchats/openAIchats';
 import appConfigReducer from './appConfig/appConfig';
 
 const rootReducer = combineReducers({
-  properties: propertiesReducer,
+  openAIchats: openAIchatsReducer,
   appConfig: appConfigReducer,
 });
 

@@ -15,21 +15,9 @@
         "arLanguage": "عربي",
         "toggleTheme": "تبديل الموضوع"
     },
-    "propertyScreen": {
-        "propertyTitle": "الممتلكات",
-        "property": {
-            "details": "التفاصيل",
-            "title": "العنوان",
-            "price": "السعر",
-            "address": "العنوان",
-            "bedrooms": "الغرف",
-            "bathrooms": "الحمامات",
-            "size": "الحجم",
-            "status": "الحالة",
-            "description": "الوصف"
-        }
-    },
-    "likedPropertyScreen": {
-        "likedPropertyTitle": "الممتلكات المعجب بها"
+    "homeScreen": {
+        "homeTitle": "الصفحة الرئيسية",
+        "inputPlaceholder": "أضف سؤالك هنا",
+        "send": "إرسال"
     }
 }

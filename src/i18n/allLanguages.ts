@@ -4,58 +4,57 @@
 // e.g. findLanguageLabel('pt') could return Brazilian Portuguese and Portugal Portuguese but we do not know the region so we simply return, Portuguese.
 
 interface Language {
-    value: string;
-    label: string;
-    engLabel: string;
-    generalEngLabel: string;
-    isRTL: boolean;
-  }
-  
-  export const allLanguages: Language[] = [
-   
-    {
-      value: 'en_GB',
-      label: 'English',
-      engLabel: 'English',
-      generalEngLabel: 'English',
-      isRTL: false,
-    },
-    {
-      value: 'fr_FR',
-      label: 'Français',
-      engLabel: 'French',
-      generalEngLabel: 'French',
-      isRTL: false,
-    },
-    {
-      value: 'ar_SA',
-      label: 'العربية',
-      engLabel: 'Arabic',
-      generalEngLabel: 'Arabic',
-      isRTL: true,
-    },
-  ];
-  
-  export const findLanguageLabel = (languageKey: string): string => {
-    let languageLabel = '';
-    allLanguages.forEach((language: Language) => {
-      if (language.value.match(languageKey.substring(0, 2))) {
-        languageLabel = language.label || language.engLabel;
-      }
-    });
-    if (!languageLabel) {
-      console.error(`No language was found to match the key ${languageKey}`);
+  value: string;
+  label: string;
+  engLabel: string;
+  generalEngLabel: string;
+  isRTL: boolean;
+}
+
+export const allLanguages: Language[] = [
+
+  {
+    value: 'en_GB',
+    label: 'English',
+    engLabel: 'English',
+    generalEngLabel: 'English',
+    isRTL: false,
+  },
+  {
+    value: 'fr_FR',
+    label: 'Français',
+    engLabel: 'French',
+    generalEngLabel: 'French',
+    isRTL: false,
+  },
+  {
+    value: 'ar_SA',
+    label: 'العربية',
+    engLabel: 'Arabic',
+    generalEngLabel: 'Arabic',
+    isRTL: true,
+  },
+];
+
+export const findLanguageLabel = (languageKey: string): string => {
+  let languageLabel = '';
+  allLanguages.forEach((language: Language) => {
+    if (language.value.match(languageKey.substring(0, 2))) {
+      languageLabel = language.label || language.engLabel;
     }
-    return languageLabel;
-  };
-  
-  export const isRtlLanguage = (languageKey: string): boolean => {
-    let isRTL = false;
-    allLanguages.forEach((language: Language) => {
-      if (language.value === languageKey) {
-        isRTL = language.isRTL;
-      }
-    });
-    return isRTL;
-  };
-  
+  });
+  if (!languageLabel) {
+    console.error(`No language was found to match the key ${languageKey}`);
+  }
+  return languageLabel;
+};
+
+export const isRtlLanguage = (languageKey: string): boolean => {
+  let isRTL = false;
+  allLanguages.forEach((language: Language) => {
+    if (language.value === languageKey) {
+      isRTL = language.isRTL;
+    }
+  });
+  return isRTL;
+};

@@ -23,27 +23,27 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = "chatGptReactNativeWrapper";
+			remoteInfo = chatGptReactNativeWrapper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* chatGptReactNativeWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chatGptReactNativeWrapperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* chatGptReactNativeWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatGptReactNativeWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* chatGptReactNativeWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "chatGptReactNativeWrapperTests.m"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* chatGptReactNativeWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chatGptReactNativeWrapper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "chatGptReactNativeWrapper/AppDelegate.h"; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "chatGptReactNativeWrapper/AppDelegate.mm"; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "chatGptReactNativeWrapper/Images.xcassets"; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "chatGptReactNativeWrapper/Info.plist"; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "chatGptReactNativeWrapper/main.m"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* chatGptReactNativeWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chatGptReactNativeWrapperTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* chatGptReactNativeWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatGptReactNativeWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = chatGptReactNativeWrapper/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = chatGptReactNativeWrapper/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = chatGptReactNativeWrapper/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = chatGptReactNativeWrapper/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = chatGptReactNativeWrapper/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = chatGptReactNativeWrapper/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-chatGptReactNativeWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatGptReactNativeWrapper.debug.xcconfig"; path = "Target Support Files/Pods-chatGptReactNativeWrapper/Pods-chatGptReactNativeWrapper.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-chatGptReactNativeWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatGptReactNativeWrapper.release.xcconfig"; path = "Target Support Files/Pods-chatGptReactNativeWrapper/Pods-chatGptReactNativeWrapper.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.debug.xcconfig"; path = "Target Support Files/Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests/Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-chatGptReactNativeWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chatGptReactNativeWrapper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "chatGptReactNativeWrapper/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = chatGptReactNativeWrapper/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.release.xcconfig"; path = "Target Support Files/Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests/Pods-chatGptReactNativeWrapper-chatGptReactNativeWrapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D0340CBE08D93B552EA3CC3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = chatGptReactNativeWrapper/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -75,7 +75,7 @@
 				00E356F21AD99517003FC87E /* chatGptReactNativeWrapperTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = "chatGptReactNativeWrapperTests";
+			path = chatGptReactNativeWrapperTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -98,7 +98,7 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				9D0340CBE08D93B552EA3CC3 /* PrivacyInfo.xcprivacy */,
 			);
-			name = "chatGptReactNativeWrapper";
+			name = chatGptReactNativeWrapper;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -172,8 +172,7 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = "chatGptReactNativeWrapperTests";
-			productname = "chatGptReactNativeWrapperTests";
+			name = chatGptReactNativeWrapperTests;
 			productReference = 00E356EE1AD99517003FC87E /* chatGptReactNativeWrapperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -193,8 +192,8 @@
 			);
 			dependencies = (
 			);
-			name = "chatGptReactNativeWrapper";
-			productName = "chatGptReactNativeWrapper";
+			name = chatGptReactNativeWrapper;
+			productName = chatGptReactNativeWrapper;
 			productReference = 13B07F961A680F5B00A75B9A /* chatGptReactNativeWrapper.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -423,7 +422,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "chatGptReactNativeWrapperTests/Info.plist";
+				INFOPLIST_FILE = chatGptReactNativeWrapperTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -435,7 +434,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chatGptReactNativeWrapper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chatGptReactNativeWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chatGptReactNativeWrapper.app/chatGptReactNativeWrapper";
 			};
@@ -447,7 +446,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = "chatGptReactNativeWrapperTests/Info.plist";
+				INFOPLIST_FILE = chatGptReactNativeWrapperTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,7 +458,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chatGptReactNativeWrapper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chatGptReactNativeWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chatGptReactNativeWrapper.app/chatGptReactNativeWrapper";
 			};
@@ -473,8 +472,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "chatGptReactNativeWrapper/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "chatGptReactNativeWrapper";
+				INFOPLIST_FILE = chatGptReactNativeWrapper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = chatGptReactNativeWrapper;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,8 +484,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chatGptReactNativeWrapper";
-				PRODUCT_NAME = "chatGptReactNativeWrapper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chatGptReactNativeWrapper;
+				PRODUCT_NAME = chatGptReactNativeWrapper;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -500,8 +499,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "chatGptReactNativeWrapper/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "chatGptReactNativeWrapper";
+				INFOPLIST_FILE = chatGptReactNativeWrapper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = chatGptReactNativeWrapper;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,8 +511,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chatGptReactNativeWrapper";
-				PRODUCT_NAME = "chatGptReactNativeWrapper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chatGptReactNativeWrapper;
+				PRODUCT_NAME = chatGptReactNativeWrapper;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

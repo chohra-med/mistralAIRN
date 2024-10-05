@@ -15,21 +15,9 @@
         "arLanguage": "Arabic",
         "toggleTheme": "Toggle Theme"
     },
-    "propertyScreen": {
-        "propertyTitle": "Properties",
-        "property": {
-            "details": "Details",
-            "title": "Title",
-            "price": "Price",
-            "address": "Address",
-            "bedrooms": "Bedrooms",
-            "bathrooms": "Bathrooms",
-            "size": "Size",
-            "status": "Status",
-            "description": "Description"
-        }
-    },
-    "likedPropertyScreen": {
-        "likedPropertyTitle": "Liked Properties"
+    "homeScreen": {
+        "homeTitle": "Home",
+        "inputPlaceholder": "Add your question here",
+        "send": "Send"
     }
 }

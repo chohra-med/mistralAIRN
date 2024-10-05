@@ -5,10 +5,9 @@ import SettingScreen from '~/screens/SettingScreen';
 import SettingsIcon from '../../assets/icons/iconSettings.svg';
 import {useTranslation} from 'react-i18next';
 import {useAppTheme} from '~/container/AppThemeProvider';
-import PropertyNavigator from './PropertyNavigator';
-import LikedPropertyList from '~/screens/LikedPropertyScreen/components/LikedPropertyList';
 // @ts-ignore
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import HomeScreen from '~/screens/HomeScreen';
 
 const Tab = createBottomTabNavigator<AppScreensParamList>();
 
@@ -16,13 +15,13 @@ const AppNavigation = () => {
   const {t} = useTranslation('common');
   const {colors} = useAppTheme();
   return (
-    <Tab.Navigator initialRouteName={AppScreens.PROPERTY_NAVIGATOR}>
+    <Tab.Navigator initialRouteName={AppScreens.HOME_SCREEN}>
       <Tab.Screen
-        name={AppScreens.PROPERTY_NAVIGATOR}
-        component={PropertyNavigator}
+        name={AppScreens.HOME_SCREEN}
+        component={HomeScreen}
         options={{
-          title: t('propertyScreen.propertyTitle'),
-          tabBarLabel: t('propertyScreen.propertyTitle'),
+          title: t('homeScreen.homeTitle'),
+          tabBarLabel: t('homeScreen.homeTitle'),
           tabBarActiveTintColor: colors.primary,
           tabBarIcon: ({color, focused}): JSX.Element => {
             return (
@@ -34,29 +33,10 @@ const AppNavigation = () => {
               />
             );
           },
-          tabBarAccessibilityLabel: t('propertyScreen.propertyTitle'),
+          tabBarAccessibilityLabel: t('homeScreen.homeTitle'),
         }}
       />
-      <Tab.Screen
-        name={AppScreens.LIKED_PROPERTY_SCREEN}
-        component={LikedPropertyList}
-        options={{
-          title: t('likedPropertyScreen.likedPropertyTitle'),
-          tabBarLabel: t('likedPropertyScreen.likedPropertyTitle'),
-          tabBarActiveTintColor: colors.primary,
-          tabBarIcon: ({color, focused}): JSX.Element => {
-            return (
-              <Icon
-                name={focused ? 'heart' : 'heart-outline'}
-                size={24}
-                color={color}
-                testID="navigateToLikedPropertyScreen"
-              />
-            );
-          },
-          tabBarAccessibilityLabel: t('likedPropertyScreen.likedPropertyTitle'),
-        }}
-      />
+
       <Tab.Screen
         name={AppScreens.SETTING_SCREEN}
         component={SettingScreen}
@@ -70,9 +50,6 @@ const AppNavigation = () => {
             );
           },
           tabBarAccessibilityLabel: t('settingScreen.settingTitle'),
-
-          // tabBarIcon: ({color}) => <SettingsIcon height={70} fill={color} />,
-          // headerTitle: t('settingScreen.settingTitle'),
         }}
       />
     </Tab.Navigator>

@@ -14,20 +14,9 @@
         "arLanguage": "Arabe",
         "toggleTheme": "Changez le theme"
     },
-    "propertyScreen": {
-        "property": {
-            "details": "Details",
-            "title": "Titre",
-            "price": "Prix",
-            "address": "Adresse",
-            "bedrooms": "Chambres",
-            "bathrooms": "Salles de bain",
-            "size": "Taille",
-            "status": "Statut",
-            "description": "Description"
-        }
-    },
-    "likedPropertyScreen": {
-        "likedPropertyTitle": "Proprietes preferees"
+    "homeScreen": {
+        "homeTitle": "Accueil",
+        "inputPlaceholder": "Ajouter votre question ici",
+        "send": "Envoyer"
     }
 }

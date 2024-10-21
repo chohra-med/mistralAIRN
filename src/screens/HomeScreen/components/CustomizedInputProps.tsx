@@ -13,10 +13,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import {ActivityIndicator, Icon, useTheme} from 'react-native-paper';
-import {IMessage} from 'react-native-gifted-chat';
-import {USER_CHAT} from '~/api/constant';
-import {uniqueId} from 'lodash';
+import {ActivityIndicator, Icon} from 'react-native-paper';
 import Logger from '~/utils/helpers/Logger';
 import {useAppTheme} from '~/container/AppThemeProvider';
 import {useTranslation} from 'react-i18next';

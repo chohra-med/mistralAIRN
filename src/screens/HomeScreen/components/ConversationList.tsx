@@ -1,15 +1,9 @@
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import useActions from '~/hooks/useActions';
-import {View, Text, StyleSheet} from 'react-native';
-import {
-  GiftedChat,
-  IMessage,
-  Send,
-  SendProps,
-  InputToolbar,
-} from 'react-native-gifted-chat';
+import {View} from 'react-native';
+import {GiftedChat, IMessage, SendProps} from 'react-native-gifted-chat';
 
-import {ActivityIndicator, Icon} from 'react-native-paper';
+import {ActivityIndicator} from 'react-native-paper';
 import {useSelector} from 'react-redux';
 import {
   mistralAIchatsActions,

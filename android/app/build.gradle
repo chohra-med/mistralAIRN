@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.chatGptReactNativeWrapper"
+    namespace "com.mistralAiRNWrapper"
     defaultConfig {
-        applicationId "com.chatGptReactNativeWrapper"
+        applicationId "com.mistralAiRNWrapper"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

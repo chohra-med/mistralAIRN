@@ -1,4 +1,4 @@
-package com.chatGptReactNativeWrapper
+package com.mistralAiRNWrapper
 
 import android.app.Application
 import com.facebook.react.PackageList

@@ -1,17 +1,13 @@
-const primary = '#463FB0' // rgb(70, 63, 176)
-const purples = {
-  purple900: '#4A5784', // rgb(74, 87, 132)
-  purple500: '#6F69C9', // rgb(111, 105, 201)
-}
+const primary = '#FF5722'; // Mistral IA's primary color (rgb(255, 87, 34))
 const grays = {
-  white: '#fff', // rgb(255, 255, 255)
-  gray100: '#F2F2F2', // rgb(242, 242, 242)
-  gray800: '#5D5D5D', // rgb(93, 93, 93)
-  gray900: '#333333', // rgb(51, 51, 51)
-  gray950: '#1e1e1e', //rgb(30, 30, 30)
-  gray975: '#121212', // rgb(18, 18, 18)
-  black: '#000', // rgb(0, 0, 0)
-}
+  white: '#FFFFFF',
+  gray100: '#F7F7F7',
+  gray800: '#8C8C8C',
+  gray900: '#323232',
+  gray950: '#1F1F1F',
+  gray975: '#121212',
+  black: '#000000',
+};
 
 export const colors = {
   light: {
@@ -20,26 +16,24 @@ export const colors = {
     background: grays.gray100,
     tint: primary,
     tabIconDefault: '#ccc',
-    ...purples,
+    onBackground: grays.white,
     ...grays,
     completedBackground: primary,
     completedPrimary: grays.white,
     navBarBackground: grays.white,
-    successText: "green"
+    successText: '#28A745', // Green for success (rgb(40, 167, 69))
   },
   dark: {
     primary,
     text: grays.white,
-    background: grays.gray900,
+    background: grays.gray100,
     tint: primary,
-    tabIconDefault: '#ccc',
-    ...purples,
+    onBackground: grays.gray800,
     ...grays,
-    white: grays.gray950,
     completedBackground: grays.gray900,
-    completedPrimary: purples.purple500,
+    completedPrimary: grays.white,
     navBarBackground: grays.gray975,
-    successText: "green"
-
+    successText: '#28A745', // Green for success (rgb(40, 167, 69))
   },
-}
+};
+

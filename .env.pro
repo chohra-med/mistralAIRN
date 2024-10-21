@@ -1,1 +1,1 @@
-OPEN_AI_TOKEN='yourToken'
+MISTRAL_AI_TOKEN='yourToken'

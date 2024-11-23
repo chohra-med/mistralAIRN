@@ -7,7 +7,7 @@ platform :ios do
      lane :beta do
        build
        pilot
-       commit_version_bump(message: 'Bump build', xcodeproj: './ios/lightCurve.xcodeproj')
+       commit_version_bump(message: 'Bump build', xcodeproj: './ios/mistralAiRNWrapper.xcodeproj')
        push_to_git_remote
      end 
     end

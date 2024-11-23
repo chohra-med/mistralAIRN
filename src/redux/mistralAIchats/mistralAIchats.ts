@@ -19,13 +19,6 @@ const propertiesSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    // builder.addCase(
-    //   mistralAIchatsActions.completeChatMistralAI.fulfilled,
-    //   (state, action) => {
-    //     state.messageList = [...state.messageList, ...action.payload];
-    //     return state;
-    //   }
-    // );
     builder.addCase(
       mistralAIchatsActions.completeChatMistralAI.fulfilled,
       (state, action) => {

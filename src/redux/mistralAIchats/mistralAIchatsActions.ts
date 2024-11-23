@@ -22,7 +22,6 @@ export const completeChatMistralAI = createAsyncThunk<
   }
   try {
     const response = await chatApi.completeChatMistralAI(prompt);
-    console.log('Chat:', JSON.stringify(response.data, null, 2));
     const data = await response.data;
 
     const chatGptAnswer: IMessage = {
@@ -40,36 +39,3 @@ export const completeChatMistralAI = createAsyncThunk<
     throw error;
   }
 });
-
-// export const completeChat = createAsyncThunk<
-//   CompleteChatResponse,
-//   CompleteChatQuery,
-//   { state: RootState }
-// >('mistralAIchats/completeChat', async ({ prompt, index }) => {
-
-//   try {
-//     const userMessage: IMessage = {
-//       _id: index,
-//       text: prompt,
-//       createdAt: new Date().getTime(),
-//       user: USER_CHAT,
-//     }
-
-//     const response = await chatApi.completeChat(prompt);
-//     const data = await response.data;
-
-//     const chatGptAnswer: IMessage = {
-//       _id: index + 1,
-//       text: data.choices[0].message.content,
-//       createdAt: new Date().getTime(),
-//       user: AI_CHAT,
-//     };
-
-//     return [userMessage, chatGptAnswer];
-//   } catch (error) {
-//     console.error('Error generating response:', error);
-//     Logger.recordError(error as Error);
-//     Logger.logApiError(error as AxiosError);
-//     throw error;
-//   }
-// });

@@ -1,79 +1,134 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Mistral AI Chat App
 
-# Getting Started
+A React Native application that integrates with Mistral AI, providing a ChatGPT-like experience. The app is built with a scalable architecture, utilizing best practices for clean code and project structure to support a large user base and future enhancements. It leverages modern libraries and tools, ensuring optimal performance and maintainability.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+By Malik CHOHRA
 
-## Step 1: Start the Metro Server
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- **Real-time AI Conversations**: Chat with Mistral AI as you would with ChatGPT.
+- **Scalable Architecture**: Designed to handle a growing codebase and user base.
+- **State Management**: Uses Redux Toolkit for efficient state management and Redux Persist for persisting state.
+- **Internationalization (i18n)**: Supports multiple languages with React i18next.
+- **Theme Management**: Customizable themes using React Native Paper.
+- **Optimized Performance**: Utilizes React Native Fast Image for better image handling and Reanimated for smooth animations.
+- **Responsive Design**: Implements React Native Size Matters for adaptive screen sizes.
+- **Environment Configuration**: Managed via React Native Config for environment variables.
+- **Unit Testing & E2E Testing**: Includes Jest and Detox for comprehensive testing.
+
+## Project Structure
+
+```plaintext
+src/
+├── api/                         # API-related files
+│   ├── Api.ts                   # Main API configuration
+│   ├── constant.ts              # API-related constants
+│   ├── chatApi/                 # Mistral AI le chat, specific API routes and methods
+├── assets/                      # Static assets like images, icons, and fonts
+├── components/                  # Reusable UI components
+│   ├── LoadingComponent/        # Loading state component
+├── container/                   # Providers for app-wide configurations (theme, language)
+├── hooks/                       # Custom hooks for various functionalities
+├── i18n/                        # Internationalization setup
+├── navigation/                  # App navigation configuration
+├── redux/                       # Redux state management
+│   ├── mistralAIchats/          # Redux slice for Mistral AI chat functionality
+├── screens/                     # App screens
+│   ├── HomeScreen/              # Main chat interface
+│   ├── SettingScreen/           # User settings
+├── theme/                       # Theming utilities and configurations
+├── types/                       # TypeScript type definitions
+└── utils/                       # Utility functions and helpers
+```
+
+## Prerequisites
+
+- Node.js
+- Yarn 
+- React Native CLI or Expo CLI
+
+## Installation
+
+Clone the repository:
 
 ```bash
-# using npm
-npm start
+git clone git@github.com:chohra-med/mistralAIRN.git
+```
 
-# OR using Yarn
+Install dependencies:
+
+```bash
+cd mistralAIRN
+yarn install
+# or npm install
+```
+
+Set up environment variables: Configure your `.env` file using the example `.env.example`.
+
+Run the app:
+
+```bash
 yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
 yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Libraries Used
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+- **React Native**: For building the cross-platform app.
+- **React Navigation**: Manages navigation within the app.
+- **Redux Toolkit**: For managing the app's state.
+- **React Native Paper**: Provides theming and UI components.
+- **Jest & Detox**: For unit and end-to-end testing.
+- **Fastlane**: Automates the CI/CD process.
+- **Axios**: Handles API requests.
+- **Luxon**: Facilitates date and time handling.
+- **React i18next**: Manages internationalization.
+- **React Native Config**: Manages environment variables.
+- **React Native Fast Image**: Optimizes image loading.
+- **React Native Localize**: Handles localization.
+- **React Native Reanimated**: Enables smooth animations.
+- **React Native Size Matters**: Ensures responsive design.
+- **React Native Splash Screen**: Manages splash screen display.
+- **React Native SVG**: Supports SVG icons.
+- **React Native Vector Icons**: Manages icons.
+- **Redux Persist**: Persists the Redux state.
 
-## Step 3: Modifying your App
+## Example App
 
-Now that you have successfully run the app, let's modify it.
+Below is a quick preview of the app in action:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+![App Preview](./screenshots/app-mistralai-rn.gif)
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Contributing
 
-## Congratulations! :tada:
+Contributions are welcome! Please follow these steps to contribute:
 
-You've successfully run and modified your React Native App. :partying_face:
+1. Fork the repository
+2. Create a new branch
 
-### Now what?
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+3. Commit your changes
 
-# Troubleshooting
+   ```bash
+   git commit -m "Add your commit message"
+   ```
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+4. Push your branch
 
-# Learn More
+   ```bash
+   git push origin feature/your-feature-name
+   ```
 
-To learn more about React Native, take a look at the following resources:
+5. Create a Pull Request
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## License
+
+This project is licensed under the MIT License.
+
+By Malik CHOHRA
+Feel free to follow me on [LinkedIn](https://www.linkedin.com/in/malik-chohra/)

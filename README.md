@@ -4,6 +4,8 @@ A React Native application that integrates with Mistral AI, providing a ChatGPT-
 
 By Malik CHOHRA
 
+Check the code here: https://reactnativetemplates.com/screensCode/20
+
 
 ## Features
 
